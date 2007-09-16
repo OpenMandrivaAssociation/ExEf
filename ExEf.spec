@@ -1,6 +1,6 @@
 %define name	ExEf
 %define version 1.70
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:   Extreme Effect is a real-time audio effects processor
 Name:      %{name}
@@ -54,17 +54,18 @@ bzcat %{SOURCE2} > ${RPM_BUILD_ROOT}%{_miconsdir}/%name.png
 bzcat %{SOURCE3} > ${RPM_BUILD_ROOT}%{_iconsdir}/%name.png
 bzcat %{SOURCE4} > ${RPM_BUILD_ROOT}%{_liconsdir}/%name.png
 
-#
-# Menu
-install -d ${RPM_BUILD_ROOT}%{_menudir}
 
-cat << EOF > ${RPM_BUILD_ROOT}%{_menudir}/%{name}
-?package(%{name}): needs="x11" \\
-		   section="Multimedia/Sound" \\
-		   title="ExEf" \\
-		   longtitle="%{summary}" \\
-		   command="%{name}" \\
-		   icon="%{name}.png"
+mkdir -p %{buildroot}%{_datadir}/applications
+cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
+[Desktop Entry]
+Name=ExEf
+Comment=%{Summary}
+Exec=%{_bindir}/%{name}
+Icon=%{name}
+Terminal=false
+Type=Application
+Categories=AudioVideo;Video
+Encoding=UTF-8
 EOF
 
 %clean
@@ -83,7 +84,7 @@ rm -rf ${RPM_BUILD_ROOT}
 %dir %{_datadir}/ExEf
 %{_datadir}/ExEf/*
 %{_datadir}/ExEf/.ExEfrc
-%{_menudir}/%{name}
+%{_datadir}/applications/mandriva-%{name}.desktop
 %{_iconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
