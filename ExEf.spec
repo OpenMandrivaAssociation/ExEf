@@ -11,6 +11,7 @@ Source1:   robots.tar.bz2
 Source2:   %{name}16.png.bz2
 Source3:   %{name}32.png.bz2
 Source4:   %{name}48.png.bz2
+BuildRoot: %{_tmppath}/%{name}-root
 License:   GPL
 Group:     Sound
 URL:	   http://twinstar.hobby.cz/exef/
