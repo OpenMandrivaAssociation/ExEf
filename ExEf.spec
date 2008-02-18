@@ -2,7 +2,7 @@
 %define version 1.70
 %define release %mkrel 2
 
-Summary:   Extreme Effect is a real-time audio effects processor
+Summary:   Real-time audio effects processor
 Name:      %{name}
 Version:   %{version}
 Release:   %{release}
