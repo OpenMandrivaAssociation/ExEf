@@ -1,6 +1,6 @@
 %define name	ExEf
 %define version 1.70
-%define release %mkrel 6
+%define release %mkrel 7
 
 Summary:   Real-time audio effects processor
 Name:      %{name}
