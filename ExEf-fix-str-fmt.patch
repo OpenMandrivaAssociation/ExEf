@@ -1,0 +1,24 @@
+--- ExEfDSP.c.str	2010-05-01 17:45:39.000000000 +0200
++++ ExEfDSP.c	2010-05-01 17:46:30.000000000 +0200
+@@ -959,10 +959,10 @@
+     fgets(s,40,strm);
+     while (strcmp(s,"*Effects\n"))
+ 	    {
+-	    printf(s);
++	    printf("%s",s);
+ 	    if (Tcl_interactive)
+ 		{
+-		fprintf(Tcl_strmw,s);
++		fprintf(Tcl_strmw,"%s",s);
+ 		}
+ 	    if (!strncmp(s,"Audio",5))
+ 		{	
+@@ -1806,7 +1806,7 @@
+     char a;
+     char path[80];
+     
+-    printf(Tcl_line);
++    printf("%s",Tcl_line);
+     if (!strncmp(Tcl_line,"Box",3))
+ 	{
+ 	sscanf(Tcl_line+4,"%hd %hd %c",&x,&y,&a);
