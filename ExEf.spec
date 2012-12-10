@@ -91,3 +91,59 @@ rm -rf ${RPM_BUILD_ROOT}
 %{_iconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
+
+
+%changelog
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 1.70-7mdv2011.0
++ Revision: 610402
+- rebuild
+
+* Sat May 01 2010 Funda Wang <fwang@mandriva.org> 1.70-6mdv2010.1
++ Revision: 541464
+- fix str fmt
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 1.70-5mdv2009.0
++ Revision: 244997
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+* Mon Feb 18 2008 Thierry Vignaud <tv@mandriva.org> 1.70-3mdv2008.1
++ Revision: 170822
+- rebuild
+- fix "foobar is blabla" summary (=> "blabla") so that it looks nice in rpmdrake
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Sun Sep 16 2007 Emmanuel Andry <eandry@mandriva.org> 1.70-2mdv2008.0
++ Revision: 88675
+- drop old menu
+- xdg menu
+- Import ExEf
+
+
+
+* Sun Jan 22 2006 Emmanuel Andry <eandry@free.fr> 1.70-1mdk
+- New release 1.70
+- mkrel
+
+* Fri May 13 2005 Nicolas Lécureuil <neoclust@mandriva.org> 1.16-3mdk
+- Rebuild
+
+* Fri Feb 20 2004 David Baudens <baudens@mandrakesoft.com> 1.16-2mdk
+- Remove broken menu entry (Documentation)
+
+* Mon Mar 10 2003 Marcel Pol <mpol@gmx.net> 1.16-1mdk
+- 1.16
+
+* Mon Mar 10 2003 Marcel Pol <mpol@gmx.net> 1.14-2mdk
+- club => contrib
+
+* Tue Dec 10 2002 Maxim Heijndijk <cchq@wanadoo.nl> 1.14-1mdk
+- Initial wrap.
