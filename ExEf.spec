@@ -1,7 +1,7 @@
 Summary:   Real-time audio effects processor
 Name:      ExEf
 Version:   1.70
-Release:   8
+Release:   9
 Source0:   %{name}.tar.bz2
 Source1:   robots.tar.bz2
 Source2:   %{name}16.png.bz2
@@ -63,6 +63,8 @@ cat > %{buildroot}%{_bindir}/ExEfDSP << EOF
 
 padsp /usr/bin/ExEfDSP.bin
 EOF
+
+chmod a+x %{buildroot}%{_bindir}/ExEfDSP %{buildroot}%{_bindir}/ExEf
 
 mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/rosa-%{name}.desktop << EOF
