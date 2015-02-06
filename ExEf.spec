@@ -1,7 +1,7 @@
 Summary:   Real-time audio effects processor
 Name:      ExEf
 Version:   1.70
-Release:   9
+Release:   10
 Source0:   %{name}.tar.bz2
 Source1:   robots.tar.bz2
 Source2:   %{name}16.png.bz2
