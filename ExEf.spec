@@ -10,7 +10,7 @@ Source4:   %{name}48.png.bz2
 Patch0:    ExEf-fix-str-fmt.patch
 License:   GPL
 Group:     Sound
-URL:	   http://twinstar.hobby.cz/exef/
+URL:	   https://twinstar.hobby.cz/exef/
 Requires:  tcl, tk
 Requires:  pulseaudio-utils
 
